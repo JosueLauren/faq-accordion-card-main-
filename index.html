@@ -13,52 +13,53 @@
 <body>
   <main class="Card">
     <section class="Logo">
-      <img src="" alt="">
+      <img class="caixa" src="images/illustration-box-desktop.svg" alt="illustration-box-desktop">
+      <img class="mulher" src="images/illustration-woman-online-desktop.svg" alt="illustration-woman-online-desktop">
     </section>
     <section class="FAQ">
-      <h1></h1>
-      <div class="perguntas&respostas">
+      <h1>FAQ</h1>
+      <div class="perguntas-respostas">
         <div class="perguntas">
           <p> How many team members can I invite?</p>
-          <a href="#"><img src="" alt=""></a>
+          <a href="#"><img id="0" src="images/icon-arrow-down.svg" alt="icon-arrow-down"></a>
         </div>
         <p class="respostas">
           You can invite up to 2 additional users on the Free plan. There is no limit on 
           team members for the Premium plan.
         </p>
       </div>
-      <div class="perguntas&respostas">
+      <div class="perguntas-respostas">
         <div class="perguntas">
           <p>What is the maximum file upload size?'</p>
-           <a href="#"><img src="" alt=""></a>
+          <a href="#"><img id="1" src="images/icon-arrow-down.svg" alt="icon-arrow-down"></a>
         </div>
         <p class="respostas">
           No more than 2GB. All files in your account must fit your allotted storage space.
         </p>
       </div>
-      <div class="perguntas&respostas">
+      <div class="perguntas-respostas">
         <div class="perguntas">
           <p>How do I reset my password?</p>
-           <a href="#"><img src="" alt=""></a>
+          <a href="#"><img id="2" src="images/icon-arrow-down.svg" alt="icon-arrow-down"></a>
         </div>
         <p class="respostas">
           Click “Forgot password” from the login page or “Change password” from your profile page.
           A reset link will be emailed to you.
         </p>
       </div>
-      <div class="perguntas&respostas">
+      <div class="perguntas-respostas">
         <div class="perguntas">
           <p>Can I cancel my subscription?</p>
-           <a href="#"><img src="" alt=""></a>
+          <a href="#"><img id="3" src="images/icon-arrow-down.svg" alt="icon-arrow-down"></a>
         </div>
         <p class="respostas">
           Yes! Send us a message and we’ll process your request no questions asked.
         </p>
       </div>
-      <div class="perguntas&respostas">
+      <div class="perguntas-respostas">
         <div class="perguntas">
           <p>Do you provide additional support?</p>
-           <a href="#"><img src="" alt=""></a>
+          <a href="#"><img id="4" src="images/icon-arrow-down.svg" alt="icon-arrow-down"></a>
         </div>
         <p class="respostas">
           Chat and email support is available 24/7. Phone lines are open during normal business hours.
@@ -67,4 +68,19 @@
     </section>
   </main>
  </body>
+ <script>
+  const respostas = document.querySelectorAll(".respostas");
+  const btns = document.querySelectorAll(".perguntas a");
+
+  btns.forEach(btn => {
+    btn.addEventListener('click', (event) => { 
+      let numID = event.target.getAttribute("id");
+      respostas[numID].classList.toggle('mostrarRespostas')
+      event.path[2].classList.toggle('boldTitulo')
+      event.target.classList.toggle('girarBtn')
+        
+     })
+  })
+
+ </script>
 </html>

@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+:root {
+    --Very-dark-desaturated-blue: hsl(238, 29%, 16%);
+    --Soft-red: hsl(14, 88%, 65%);
+    --Soft-violet: hsl(273, 75%, 66%);
+    --Soft-blue: hsl(240, 73%, 65%);
+    --Very-dark-grayish-blue: hsl(237, 12%, 33%);
+    --Dark-grayish-blue: hsl(240, 6%, 50%);
+    --Light-grayish-blue: hsl(240, 5%, 91%);
+    --Font-Body: 12px;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Kumbh Sans", sans-serif;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    font-size: var(--Font-Body);
+    background-image: linear-gradient(to bottom, var(--Soft-blue), var(--Soft-violet));
+   
+}
+
+main.Card {
+    width: 70%;
+    height: auto;
+    margin: auto;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    background-color: white;
+}
+
+section.Logo {
+    width: 50%;
+    min-height: 500px ;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background-image: url(images/bg-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: top 70% right -20%;
+
+    
+}
+
+img.caixa {
+    position: relative;
+    left: -40px;
+    top: 40px;
+    z-index: 1;
+}
+
+img.mulher {
+    position: relative;
+    left: -250px;
+    top: -20px;
+}
+
+section.FAQ {
+    width: 40%;
+}
+
+section.FAQ h1 {
+    font-size: 25px;
+    margin: 40px 0px;
+}
+
+div.perguntas-respostas {
+   margin: 20px auto;
+   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+div.perguntas {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+div.perguntas a img {
+   display: block;
+}
+
+p.respostas {
+    margin-bottom: 20px;
+    display: none;
+    line-height: 1.7;
+}
+
+.mostrarRespostas {
+    display: block !important;
+}
+
+.girarBtn {
+    transform: rotate(180deg);
+}
+
+.boldTitulo {
+    font-weight: 700;
+
+}
+
+
+@media screen and (max-width: 800px) {
+    
+    body {
+        overflow-x: hidden;
+    }
+    
+
+    main.Card {
+        width: 90%;
+        flex-direction: column;
+        margin-top: 130px;
+        
+    }
+
+    section.Logo{
+        width: 100%;
+        height: 50vh;
+        overflow: visible;
+        background-image: url(images/bg-pattern-mobile.svg);
+        background-position: top;
+        background-size: contain;
+        min-height: 50px;
+
+    }
+
+    img.mulher {
+        width: 80%;
+        left: 0px;
+        top: -150px;
+        left: -150px;
+    }
+
+    img.caixa {
+        width: 40%;
+        left: 0px;
+        top: -120px;
+    }
+
+    section.FAQ{
+        width: 90%;
+    }
+
+    section.FAQ h1 {
+        text-align: center;
+    }
+}
+
